@@ -1,0 +1,213 @@
+$headerColor:#8DA290;
+$headerLettersColor: #F2CBBB;
+$Background:#BEC7B4;
+$newsColor: #DEE2D9;
+$newsColorLetters: #8DA290;
+$BackgroundForm: #9fa697;
+
+$headerColorBlack:#6f8072;
+$headerLettersColorBlack: #F2CBBB;
+$BackgroundBlack:#8c9483;
+$newsColorBlack: #bbae7955;
+$newsColorLettersBlack: #4f451b;
+$BackgroundFormBlack: #757a6e;
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#backgroundHeader {
+  padding: 15px;
+  background-color: #BEC7B4;
+}
+
+#homePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 95vh;
+  background-color: $Background;
+}
+
+#homePage.dark {
+  @extend #homePage;
+  background-color: $BackgroundBlack;
+}
+
+#header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: $headerColor;
+    color: $headerLettersColor;
+    font-size: 17px;
+    border-radius: 35px;
+}
+#header.dark {
+  @extend #header;
+  background-color: $headerColorBlack;
+  color: $headerLettersColorBlack;
+}
+
+
+#formComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: $Background;
+}
+
+#formComponent.dark {
+  @extend #formComponent;
+  background-color: $BackgroundBlack;
+}
+
+#inputsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 550px;
+    width: 35%;
+    border-radius: 10px;
+    background-color: $BackgroundForm;
+}
+
+#inputsForm.dark {
+  @extend #inputsForm;
+  background-color: $BackgroundFormBlack;
+}
+
+#input {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+#textArea {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#form, #news, #home, #theme-btn{
+    cursor: pointer;
+}
+
+#listNewsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: $Background;
+}
+
+#listNewsPage.dark {
+  @extend #listNewsPage;
+  background-color: $BackgroundBlack;
+}
+
+#listNews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $Background;
+}
+
+#listNews.dark {
+  @extend #listNews;
+  background-color: $BackgroundBlack;
+}
+
+#newsPainting {
+    width: 40%;
+    height: 350px;
+    border-radius: 10px;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $newsColor;
+    color: $newsColorLetters;
+}
+
+#newsPainting.dark {
+  @extend #newsPainting;
+  background-color: $newsColorBlack;
+    color: $newsColorLettersBlack;
+}
+
+#title {
+    font-weight: bold;
+    margin:10px;
+    color: $newsColorLetters;
+}
+
+#title.dark{
+  @extend #title;
+  color: $newsColorLettersBlack;
+}
+
+#img {
+    height: 160px;
+    margin:10px;
+}
+
+#description {
+    margin:10px;
+}
+
+#imgRover {
+  height: 400px;
+}
+
+#carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 600px;
+  background-color: $BackgroundForm;
+
+  #left, #right{
+    cursor: pointer;
+    color: $headerLettersColor;
+  }
+}
+
+#carrousel.dark {
+  @extend #carrousel;
+  background-color: $BackgroundFormBlack;
+
+  #left.dark, #right.dark{
+    cursor: pointer;
+    color: $headerLettersColorBlack;
+  }
+}
+
+#filterNews {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: $headerColor;
+}
+
+#country {
+  color: #5d6c60;
+  cursor: pointer;
+}
+
+

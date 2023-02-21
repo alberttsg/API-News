@@ -1,0 +1,15 @@
+
+#submitBtn {
+    all:unset;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #8e9486;
+    cursor: pointer;
+}
+
+#submitBtn.dark {
+    @extend #submitBtn;
+    background-color: #595d53;
+}
