@@ -55,7 +55,29 @@ $BackgroundFormBlack: #757a6e;
     color: $headerLettersColor;
     font-size: 17px;
     border-radius: 35px;
+
+    button {
+      all: unset;
+      cursor: pointer;
+    }
+
+    // .homeBold, .formBold, .newsBold{
+    //   font-weight: bold;
+    // }
 }
+
+#home.homeBold {
+  text-decoration: underline;
+}
+
+#form.formBold {
+  text-decoration: underline;
+}
+
+#news.newsBold {
+  text-decoration: underline;
+}
+
 #header.dark {
   @extend #header;
   background-color: $headerColorBlack;

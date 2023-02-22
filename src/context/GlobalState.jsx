@@ -14,7 +14,6 @@ export const GlobalProvider = ({ children }) => {
 
   const changeTheme = (event) => {
     let theme = event.target.innerText
-    console.log(theme)
 
   if(theme === 'light'){
     theme = 'dark'
