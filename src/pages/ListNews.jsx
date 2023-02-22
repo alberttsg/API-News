@@ -7,6 +7,7 @@ export const ListNews = () => {
 
   const [ news, setNews ] = useState([])
   const [ country, setCountry ] = useState('us')
+  const [clas, setClas ] = useState('eeuu')
 
   const { theme } = useContext(GlobalContext)
 
@@ -15,33 +16,26 @@ export const ListNews = () => {
     try{
       const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=b5528777e86d4e829627bd7e843892fa`)
 
-      res.data.articles.map((e, index)=>{
-        if(!e.urlToImage  || e.urlToImage == undefined){
-          console.log(e)
-          console.log(index)
-          res.data.articles.splice(index, 1)
-        }
-      })
-      console.log(res.data.articles)
-      setNews([...res.data.articles])
+      const resFiltered = res.data.articles.filter((element)=> element.urlToImage !== null)
+
+      setNews([...resFiltered])
 
     } catch(e){
       console.log(e)
     }
-
-
   }
 
-  useEffect(()=>{ 
+  useEffect(()=>{
     apiNews()
   },[country])
 
   return (
     <div id='listNewsPage' className={ theme }>
-    <div id='filterNews'>
-      <div id='country' onClick={()=>setCountry('au')}>Australia</div>
-      <div id='country' onClick={()=>setCountry('fr')}>Francia</div>
-      <div id='country' onClick={()=>setCountry('jp')}>Japan</div>
+    <div id='filterNews'  className={ theme }>
+    <button id='countryEeuu' onClick={()=>setCountry('us')} onFocus={()=>setClas('eeuu')} onBlur={()=>setClas('')} className={clas}>EEUU</button>
+      <button id='countryAus' onClick={()=>setCountry('au')} onFocus={()=>setClas('aus')} onBlur={()=>setClas('')} className={clas} >Australia</button>
+      <button id='countryFr' onClick={()=>setCountry('fr')} onFocus={()=>setClas('fr')} onBlur={()=>setClas('')} className={clas}>Francia</button>
+      <button id='countryJpn' onClick={()=>setCountry('jp')} onFocus={()=>setClas('jpn')} onBlur={()=>setClas('')} className={clas}>Japan</button>
     </div>
       <div id='listNews' className={ theme }>{news.map((e, index)=>(
         <div id='newsPainting' className={ theme } key={index}>

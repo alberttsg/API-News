@@ -11,7 +11,7 @@ export const Header = () => {
   const { theme } = useContext(GlobalContext)
 
   return (
-    <div id='backgroundHeader'>
+    <div id='backgroundHeader' className={ theme }>
       <div id='header' className={ theme }>
         <div onClick={()=> navigate('/')} id='home' >Home</div>
         <div onClick={ () => navigate('/form')} id='form'>Form</div>

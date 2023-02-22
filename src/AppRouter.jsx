@@ -1,7 +1,7 @@
 import { useRoutes } from 'react-router-dom';
-import { ListNews } from "./functions/ListNews"
-import { Form } from './functions/Form'
-import { Home } from './functions/Home'
+import { ListNews } from "./pages/ListNews"
+import { Form } from './pages/Form'
+import { Home } from './pages/Home'
 
 function AppRouter() {
 

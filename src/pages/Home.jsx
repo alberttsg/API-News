@@ -14,10 +14,8 @@ export const Home = () => {
 
   try{
     const res = await axios.get('https://api.thecatapi.com/v1/images/search?limit=10')
-    console.log(res)
 
     const imgArray = res.data.map((e)=> e.url)
-    console.log(imgArray)
     setImg(imgArray)
 
   }catch(e){
